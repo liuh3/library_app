@@ -1,0 +1,29 @@
+<h1>Users</h1>
+
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>Edit</th>
+			<th>Remove</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		{{#each model as |user|}}
+		<tr>
+			<th>{{user.id}}</th>
+			<th>{{user.email}}</th>
+			<th>{{user.password}}</th>
+			<td><button class="btn btn-info btn-xs" {{action 'editUser' user}}>Edit</button></td>
+			<td><button class="btn btn-danger btn-xs" {{action 'deleteUser' user}}>Delete</button></td>
+			</tr>
+			{{/each}}
+		</tbody>
+
+
+
+
+	</table>

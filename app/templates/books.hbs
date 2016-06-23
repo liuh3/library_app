@@ -1,0 +1,22 @@
+<h1>Books</h1>
+<!-- title, released year, author, library -->
+<table class="table table-boredered table-striped">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Year</th>
+			<th>Author</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		{{#each model as |book|}}
+		<tr>
+		<td>{{book.title}}</td>
+		<td>{{book.releaseYear}}</td>
+		<td>{{book.author.name}}</td>
+
+		</tr>
+		{{/each}}
+	</tbody>
+</table>

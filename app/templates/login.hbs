@@ -1,0 +1,27 @@
+<div class="jumbotron text-center signin-box">
+
+	<form class="form-signin">
+		<h2 class="form-signin-heading">Please sign in</h2>
+		{{input type="email" value=loginEmail class="form-control" placeholder="Email address" autofocus="autofocus"}}
+		<br>
+		{{input type="password" value=loginPassword class="form-control" placeholder="Password" required="required"}}
+		<br>
+		<div class="col-md-12">
+			<button class="btn btn-lg btn-primary col-md-5 "  disabled={{isInvalid}} {{action 'login' model}}>Sign In</button>
+			<span class="col-md-2"></span>
+			{{#link-to 'signUp' class="btn btn-lg btn-primary col-md-5" }} Sign Up {{/link-to}}
+		</div>
+		
+	</form>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	{{#if responseMessage}}
+	<div class="alert alert-success">{{responseMessage}}</div>
+	{{/if}}
+	<br><br>
+
+</div>
+

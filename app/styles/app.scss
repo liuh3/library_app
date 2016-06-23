@@ -1,0 +1,38 @@
+@import "bootstrap";
+
+body {
+  padding-top: 20px;
+}	
+
+html {
+	overflow-y: scroll;
+}
+
+.library-item{
+	min-height: 150px;
+}
+
+.label-fade{
+	opacity: 0;
+	@include transition(all 0.5s);
+	&.label-show{
+		opacity: 1;
+	}
+}
+
+.vtop{
+	vertical-algin: top!important;
+}
+
+.not-bold{
+	font-weight: normal!important;
+}
+
+.btn-margin{
+	margin: 2px;
+}
+
+.signin-box{
+	width: 50%;
+	margin: auto;
+}
