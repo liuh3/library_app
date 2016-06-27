@@ -17,7 +17,7 @@
 			<th>{{user.id}}</th>
 			<th>{{user.email}}</th>
 			<th>{{user.password}}</th>
-			<td><button class="btn btn-info btn-xs" {{action 'editUser' user}}>Edit</button></td>
+			<th>{{#link-to 'admin.users.profile' user.id class='btn btn-success btn-xs'}}Edit{{/link-to}}</th>
 			<td><button class="btn btn-danger btn-xs" {{action 'deleteUser' user}}>Delete</button></td>
 			</tr>
 			{{/each}}

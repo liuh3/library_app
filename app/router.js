@@ -15,6 +15,7 @@ Router.map(function() {
     this.route('seeder');
     this.route('users', function(){
       this.route('edit',{path:'/:user_id/edit'});
+      this.route('profile',{path:'/:user_id/profile'});
     });
   });
 

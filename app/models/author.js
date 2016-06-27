@@ -6,9 +6,9 @@ import Faker from 'faker';
 
 export default Model.extend({
 
-  name: DS.attr('string'),
+  name: attr('string'),
 
-  books: DS.hasMany('book', {inverse: 'author', async: true}),
+  books: hasMany('book', {inverse: 'author', async: true}),
 
   randomize() {
     this.set('name', Faker.name.findName());

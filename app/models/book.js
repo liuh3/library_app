@@ -5,11 +5,11 @@ import Faker from 'faker';
 
 export default Model.extend({
 
-  title:        DS.attr('string'),
-  releaseYear:  DS.attr('date'),
+  title:        attr('string'),
+  releaseYear:  attr('date'),
 
-  author:       DS.belongsTo('author', {inverse: 'books', async: true}),
-  library:      DS.belongsTo('library', {inverse: 'books', async: true}),
+  author:       belongsTo('author', {inverse: 'books', async: true}),
+  library:      belongsTo('library', {inverse: 'books', async: true}),
 
   randomize(author, library) {
     this.set('title', this._bookTitle());

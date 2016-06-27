@@ -7,7 +7,5 @@ export default Model.extend({
   password: attr('string'),
   firstName: attr('string'),
   lastName: attr('string'),
-  department: attr('string'),
-  phoneNumber: attr('string'),
   summary: attr('string')
 });

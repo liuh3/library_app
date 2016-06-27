@@ -15,9 +15,9 @@ export default Ember.Controller.extend({
 			const password = this.get('signUpPassword');
 			const newUser = this.store.createRecord('user',{email: email, password: password});
 			newUser.save().then((response) =>{
-				this.set('responseMessage', 'You have successfully signed up!');
 				this.set('signUpEmail','');
 				this.set('signUpPassword','');
+				this.transitionToRoute('index');
 			});
 		}
 	}
